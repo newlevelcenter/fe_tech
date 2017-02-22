@@ -1,0 +1,11 @@
+<script>
+//Если контекст выполнения не указан - выполняется в контексте объекта window
+window.a = 5
+function sayThis() {     
+     alert(this.a);
+}
+
+sayThis.call() // выдаст 5
+
+
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  
+</head>
+<body>
+
+<script>
+
+//Есть 2 объекта
+	var h = {
+		word : "Hello!"
+	}
+
+	var g = {
+		word : "Good bye!"
+	}
+	
+	//и функция, которая выводит поле word от this, 
+	//если оно существует и "Nothing to say", если не существует
+	var say = function(){
+		console.log(this.word ? this.word : "Nothing to say!");
+	}
+	
+	//добавляем к объектам h, g метод say
+	h.say = say;
+	g.say = say;
+	
+	//запускаем метод say для каждого из объектов и независимо от объекта
+	h.say();
+	g.say();
+	say();
+	console.log("------");
+	
+</script>
+</body>
+</html>

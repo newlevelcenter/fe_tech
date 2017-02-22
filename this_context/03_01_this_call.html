@@ -1,0 +1,12 @@
+<script>
+var Action1 = {name: 'Start'}
+var Action2 = {name: 'Finish'}
+
+function sayName() {
+    // this — ссылка на объект, в контексте которого вызвана функция
+    console.log(this.name);
+}
+
+sayName.call(Action1) // выдаст сообщение "Start"
+sayName.call(Action2) // выдаст сообщение "Finish"
+</script>

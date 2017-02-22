@@ -1,0 +1,14 @@
+<script>
+var Action1 = {
+    name: 'Start',
+    sayName: function() {
+        console.log(this.name);
+    }
+};
+
+var Action2 = {name: 'Finish'};
+
+Action1.sayName() // выдаст сообщение "Start"
+Action1.sayName.call(Action2) // выдаст сообщение "Finish"
+
+</script>

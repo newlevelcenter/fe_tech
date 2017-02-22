@@ -1,0 +1,12 @@
+<script>
+//call может передавать параметры
+var obj = {attr: 10};
+
+function sum(a, b) {
+    console.log(this.attr + a + b);
+}
+
+sum.call(obj, 5, 2) // выдаст сообщение с результатом "17"
+
+
+</script>
