@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document. AppendChild</title>
+</head>
+<body>
+
+  <script>
+	// получаем body
+	var body = document.body;
+
+	//создаем элемент div
+	var div1 = document.createElement('div');
+	console.log(div1);
+	div1.innerHTML = 'Hello World!';
+
+	body.appendChild(div1);
+
+  </script>
+</body>
+</html>
