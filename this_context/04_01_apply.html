@@ -1,0 +1,16 @@
+<script>
+	window.name = 'окошко';
+	var test = function () {console.log(this.name);}
+	test(); //->окошко, т.к. функция объявлена в контексте window
+
+	var obj = {
+		name: 'объектик',
+		fx: function() {
+			test();//->окошко, т.к. функция объявлена в контексте window
+			test.apply(this);//->объектик, т.к. мы вызвали функцию в нужном нам контексте
+		}
+	}	
+
+obj.fx();
+
+</script>

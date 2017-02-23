@@ -1,0 +1,19 @@
+<script>
+//apply может передавать параметры массивом
+	var arr = [1,2];
+	var obj = {attr: 10};
+
+	
+
+	function arg(a) {
+    	console.log(a);
+	}	
+
+
+	arg.apply(obj, arr) // выдаст сообщение с результатом "1"
+	arg.call(obj, arr) // выдаст массив
+
+	//Важное замечание - call может передать массив в функцию, а apply - нет
+
+
+</script>
