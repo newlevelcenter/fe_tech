@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  
+</head>
+<body>
+	<p>Первый абзац</p>
+	<p>Второй абзац</p>
+	<p>Третий абзац</p>
+	
+<script>
+	
+	var div = document.createElement('div');
+	var p = document.createElement('p');
+	var label = document.createElement('label');
+	var input = document.createElement('input');
+	input.type = "checkbox";
+	input.name = "chk1";
+	input.id = "chk1";
+	input.className = "chk1";
+
+
+	
+	document.body.appendChild(div);
+	div.appendChild(p);
+	p.appendChild(label);
+	p.appendChild(input);
+</script>
+</body>
+</html>
