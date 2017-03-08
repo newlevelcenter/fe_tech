@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+    function createCounter() {
+       var numberOfCalls = 0;
+       return function() {
+          return ++numberOfCalls;
+       }
+    }
+    var fn = createCounter();
+    console.log(fn()); //1
+    console.log(fn()); //2
+    console.log(fn()); //3
+
+	</script>
+</body>
+</html>

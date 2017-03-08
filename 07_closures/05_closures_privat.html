@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var MyModule = (function() {
+	   var name = 'Habrahabr';
+	   function sayPreved() {
+	      alert('PREVED ' + name.toUpperCase());
+	   }
+	   return {
+	      sayPrevedToHabrahabr: function() {
+	         sayPreved(name);
+	      }
+	   }
+	})();
+	MyModule.sayPrevedToHabrahabr(); //alerts «PREVED Habrahabr»	</script>
+</body>
+</html>

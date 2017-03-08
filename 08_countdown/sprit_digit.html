@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.sprite{
+			background: url('digits.jpg');
+			width:180px;
+			height:233px;
+			border: 1px solid;
+		}
+		.pos0{background-position: -2px 0px;}
+		.pos1{background-position: -188px 0px;}
+		.pos2{background-position: -376px 0px;}
+		.pos3{background-position: -564px 0px;}
+		.pos4{background-position: -750px 0px;}
+		.pos5{background-position: -2px 233px;}
+		.pos6{background-position: -188px 233px;}
+		.pos7{background-position: -376px 233px;}
+		.pos8{background-position: -564px 233px;}
+		.pos9{background-position: -750px 233px;}
+		.cl{clear:both;margin-left:5px;}
+	</style>
+</head>
+
+<body>
+	<div id = "sprite1" class = "sprite"></div>
+	<!--<div class = "sprite pos1"></div>
+	<div class = "sprite pos2"></div>
+	<div class = "sprite pos3"></div>
+	<div class = "sprite pos4"></div>
+	<div class = "sprite pos5"></div>
+	<div class = "sprite pos6"></div>
+	<div class = "sprite pos7"></div>
+	<div class = "sprite pos8"></div>
+	<div class = "sprite pos9"></div>
+		-->
+	<button id = btn1>1</button>
+	<button id = btn2>2</button>
+	<button id = btn3>3</button>
+	<script type="text/javascript">
+		btn1.addEventListener("click",fbtn1);
+		btn2.addEventListener("click",fbtn2);
+		btn3.addEventListener("click",fbtn3);
+		function fbtn1(){
+			document.getElementById("sprite1").className = 'sprite pos1';
+			console.log(sprite1.class);
+			console.log("btn1");
+		}
+		function fbtn2(){
+			sprite1.className  = 'sprite pos2' ;
+			console.log("btn2");
+		}
+		function fbtn3(){
+			sprite1.className = 'sprite pos3' ;
+			console.log("btn3");
+		}
+		count = 0;
+		function out_digit(n){
+			sprite1.className = 'sprite pos'+n ;
+		}
+
+		window.setInterval(function(){ 
+				count++;
+				console.log(count);
+				out_digit(count%10);
+					},1000);
+
+	</script>
+	
+</body>
+</html>

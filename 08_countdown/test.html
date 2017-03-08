@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+	<head>
+	<meta charset="utf-8" />
+	<title>Счетчик времени до события</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	
+	<script type="text/javascript">
+	 
+	 // Функция вычисляет время до события
+	 function timeToEvent(eventDate)
+	  {
+	    var now = new Date();
+		
+		var output = '';		
+		// количество дней до события
+		var daystoED = Math.floor(Math.round(eventDate-now)/86400000);
+		
+		daystoED = (daystoED < 1) ? "0"+daystoED : daystoED;
+		// количество часов до события
+		var hourstoED = 24 - now.getHours() - 1;
+		hourstoED = (hourstoED < 10) ? "0"+hourstoED : hourstoED;
+		// количество минут до события
+		var minutestoED = 60 - now.getMinutes() - 1;
+		minutestoED = (minutestoED < 10) ? "0"+minutestoED : minutestoED;
+		// количество секунд до события
+		var secondstoED = 60 - now.getSeconds() - 1;
+		secondstoED = (secondstoED < 10) ? "0"+secondstoED : secondstoED;		
+		//сообщение
+		output = daystoED+" дн. "+hourstoED+" час. "+minutestoED+" мин. "+secondstoED+" сек.";
+		return output;
+	  }
+	 
+	 window.onload = function(){
+	   // текущая дата
+	   var now = new Date();	   
+	   // дата предстоящего события
+	   var eventDate = new Date(2017,1,24);
+	   var span = document.getElementById('timetoevent');
+	   var text = "До окончания распродажи осталось ";
+	   var div = document.getElementById('event-mess');
+	   
+		   if(now < eventDate){
+			   
+			   div.firstChild.nodeValue = text;
+			   
+			   window.setInterval(function(){ 
+					  span.innerHTML = timeToEvent(eventDate); 
+					},1000);	   	   
+		   }		   		
+	 }
+	</script>
+	
+	</head>
+	<body>
+		<div id="event-mess"> <span id="timetoevent"></span></div>
+	</body>
+</html>

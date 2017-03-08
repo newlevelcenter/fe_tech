@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var createHelloFunction = function(name) {
+       return function() {
+          console.log('Hello, ' + name);
+       }
+    }
+    var sayHelloMax = createHelloFunction('Max');
+    sayHelloMax(); //Console.log «Hello, Habrahabr»
+
+
+	</script>
+</body>
+</html>
