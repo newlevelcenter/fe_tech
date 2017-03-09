@@ -1,0 +1,16 @@
+div{
+	border:1px solid;
+	float: left;
+}
+.cl1{
+	height:100px;
+	width:150px;
+}
+.cl2{
+	height:200px;
+	width:100px;
+}
+.cl3{
+	height:300px;
+	width:50px;
+}

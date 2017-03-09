@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!--<link href = "css/main.css" rel = "stylesheet">-->
+	<script
+  src="http://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+	<script src = "js/js.js"></script>
+	<style>
+		div{background: white;
+		}
+		.cl1{
+			background: url('img/ferrari.jpg');
+			width:200px;
+			height:200px;
+		}
+		.cl2{
+			background: url('img/geography.png');
+			width:200px;
+			height:200px;
+		}
+		.cl3{
+			background: url('img/history.png');
+			width:200px;
+			height:200px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class = "slider">
+		<div class = "cl1"></div>
+		<div class = "cl2"></div>
+		<div class = "cl3"></div>
+	</div>
+	    <script type="text/javascript">
+	    /*
+			Схема плагина: 
+	    */
+	    	/*$('.slider div').css('float', 'left');
+	    	$('.slider').css('margin', '0 auto').css('width','200px').css('height','200px').css('overflow','hidden');
+	    	*/
+	    	$('.slider').slider();
+	    	//console.log(tallest);
+	    </script>
+	  
+</body>
+</html>
