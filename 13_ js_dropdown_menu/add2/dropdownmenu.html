@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Многоуровневое выпадающее меню (JavaScript+CSS)</title>
+<link rel="stylesheet" type="text/css" href="dropdownmenu.css">
+<script type="text/javascript" src="dropdownmenu.js"></script>
+<script type="text/javascript">
+
+function init()
+{
+	(new ddMenu('mainmenu'));
+	(new ddMenu('menu2'));
+}
+
+</script>
+</head>
+
+<body onLoad="init()">
+
+<h1>Многоуровневое выпадающее меню (JavaScript+CSS)</h1>
+<p>Выпадающее меню можно сделать используя один лишь CSS, но, проблема как всегда в браузере Internet Explorer, который умеет обрабатывать событие hover только в теге &lt;A&gt;.</p>
+
+<h2>Пример 1. Выпадающее меню разделов сайта</h2>
+<ul id="mainmenu">
+	<li><a href="/">Главная</a></li>
+	<li><a href="/internet.php">Представительства</a>
+		<ul>
+			<li><ins id="vkontakte"></ins><a href="http://vkontakte.ru/expange">В Контакте</a></li>
+			<li><ins id="facebook"></ins><a href="http://www.facebook.com/pages/Expange/103065229769965">Фэйсбук</a></li>
+			<li><ins id="friendfeed"></ins><a href="http://friendfeed.com/expange">Френдфид</a></li>
+			<li><ins id="livejournal"></ins><a href="http://expange.livejournal.com/">Лайвжорнал (ЖЖ)</a></li>
+			<li><ins id="twitter"></ins><a href="http://twitter.com/expange">Твиттер</a></li>
+		</ul>
+	</li>
+	<li><a href="/news/">Новости</a>
+		<ul>
+			<li><a href="/news/2011/">2011</a></li>
+			<li><a href="/news/2010/">2010</a></li>
+		</ul>
+	</li>
+	<li><a href="#">Все остальное</a>
+		<ul>
+			<li><a href="/faces.php">Лица expange</a></li>
+			<li><a href="/images/">Изображения</a></li>
+			<li><a href="/about.php">О проекте</a></li>
+			<li><a href="/terms.php">Правила пользования</a></li>
+		</ul>
+	</li>
+	<li><ins id="af"></ins><a href="http://artemfedorov.ru">Артем Федоров</a></li>
+</ul>
+
+<br><br><br><br><br><br><br><br><br>
+
+
+<h2>Пример 2. Выпадающее меню некоторых категорий сайта</h2>
+<ul id="menu2">
+	<li><a href="/c/1-Apache">Apache</a>
+		<ul>
+			<li><a href="/c/6-htaccess">htaccess</a>
+				<ul>
+					<li><a href="/c/7-mod_rewrite">mod_rewrite</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><a href="/c/23-Авто">Авто</a>
+		<ul>
+			<li><a href="/c/25-Экслуатация">Экслуатация</a></li>
+			<li><a href="/c/24-Ремонт">Ремонт</a></li>
+		</ul>
+	</li>
+	<li><a href="/c/2-Кулинария">Кулинария</a>
+		<ul>
+			<li><a href="/c/18-Выпечка">Выпечка</a></li>
+			<li><a href="/c/19-Мясные_блюда">Мясные блюда</a></li>
+			<li><a href="/c/3-Салаты">Салаты</a></li>
+			<li><a href="/c/5-Прохладительные_напитки">Прохладительные напитки</a></li>
+		</ul>
+	</li>
+	<li><a href="/c/8-СУБД">СУБД</a>
+		<ul>
+			<li><a href="/c/9-MySQL">MySQL</a></li>
+		</ul>
+	</li>
+	<li><a href="/c/31-Интернет">Интернет</a>
+		<ul>
+			<li><a href="/c/36-Блоги">Блоги</a></li>
+			<li><a href="/c/45-Браузеры">Браузеры</a>
+				<ul>
+					<li><a href="/c/46-Firefox">Firefox</a></li>
+					<li><a href="/c/47-Internet_Explorer">Internet Explorer</a></li>
+					<li><a href="/c/48-Opera">Opera</a></li>
+					<li><a href="/c/49-Safari">Safari</a></li>
+					<li><a href="/c/50-Google_Chrome">Google Chrome</a></li>
+				</ul>
+			</li>
+			<li><a href="/c/52-Поисковые_системы">Поисковые системы</a></li>
+			<li><a href="/c/57-Социальные_сети">Социальные сети</a></li>
+		</ul>
+	</li>
+	<li><a href="/c/10-Программирование">Программирование</a>
+		<ul>
+			<li><a href="/c/12-JavaScript">JavaScript</a>
+				<ul>
+					<li><a href="/c/39-Ajax">Ajax</a></li>
+					<li><a href="/c/81-События">События</a></li>
+					<li><a href="/c/97-Строки">Строки</a></li>
+				</ul>
+			</li>
+			<li><a href="/c/11-PHP">PHP</a>
+				<ul>
+					<li><a href="/c/96-Дата_и_время">Дата и время</a></li>
+					<li><a href="/c/16-Регулярные_выражения">Регулярные выражения</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li><a href="/c/13-Веб-дизайн">Веб-дизайн</a>
+		<ul>
+			<li><a href="/c/14-HTML">HTML</a>
+				<ul>
+					<li><a href="/c/62-Верстка">Верстка</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<br><br>
+
+<h2>Материалы</h2>
+<table>
+<tr><td>Архив с примером</td><td><a href="dropdownmenu_example.rar">скачать</a></td></tr>
+<tr><td>JavaScript</td><td><a href="dropdownmenu.js">dropdownmenu.js</a></td></tr>
+<tr><td>CSS</td><td><a href="dropdownmenu.css">dropdownmenu.css</a></td></tr>
+<tr><td><img src="down.gif" width="8" height="4" alt="вниз"></td><td><a href="down.gif">Вниз</a></td></tr>
+<tr><td><img src="side.gif" width="4" height="8" alt="вбок"></td><td><a href="side.gif">Вбок</a></td></tr>
+<tr><td><img src="vk.gif" width="16" height="16" alt="vkontakte"></td><td><a href="vk.gif">В Контакте</a></td></tr>
+<tr><td><img src="facebook.gif" width="16" height="16" alt="facebook"></td><td><a href="facebook.gif">Фэйсбук</a></td></tr>
+<tr><td><img src="friendfeed.gif" width="16" height="16" alt="friendfeed"></td><td><a href="friendfeed.gif">Френдфид</a></td></tr>
+<tr><td><img src="livejournal.gif" width="16" height="16" alt="livejournal"></td><td><a href="livejournal.gif">Лайвжорнал (ЖЖ)</a></td></tr>
+<tr><td><img src="twitter.gif" width="16" height="16" alt="twitter"></td><td><a href="twitter.gif">Твиттер</a></td></tr>
+<tr><td><img src="artem.gif" width="16" height="16" alt="Артем Федоров"></td><td><a href="artem.gif">Артем Федоров</a></td></tr>
+</table>
+
+<hr>
+
+<p>Автор: <a href="http://artemfedorov.ru">Артем Федоров</a></p>
+
+</body>
+</html>

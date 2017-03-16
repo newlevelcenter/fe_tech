@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+h1, h2, h3 {font-weight:normal; clear:both; padding:0; margin:0;}
+h1 {padding:5px 0 10px 0;}
+h2 {padding:15px 0 5px 0;}
+h3 {padding:10px 0 5px 0;}
+p {width:600px; line-height:1.5;}
+td {padding:3px;}
+a {color:#900;}
+
+ul {margin:0; padding:0; list-style:none;}
+ul li {float:left; padding:5px 10px; background-color:#EEE; position:relative; white-space:nowrap;}
+
+ul li.hover {background-color:#DDD;}
+
+ul li ul {left:0; top:30px;}
+ul li ul li ul {top:0; left:100%;}
+
+ul li a.dd {background:url(down.gif) no-repeat right center; padding-right:13px;}
+ul li ul li a.dd {background:url(side.gif) no-repeat right center; padding-right:13px;}
+
+ul li li {float:none;}
+ul li.dd ul li a {background:none;}
+
+ul li ul {position:absolute;}
+
+ul ins {text-decoration:none;}
+
+#vkontakte {background:url(vk.gif) no-repeat left center; padding-left:20px; text-decoration:underline;}
+#facebook {background:url(facebook.gif) no-repeat left center; padding-left:20px; text-decoration:underline;}
+#friendfeed {background:url(friendfeed.gif) no-repeat left center; padding-left:20px; text-decoration:underline;}
+#livejournal {background:url(livejournal.gif) no-repeat left center; padding-left:20px; text-decoration:underline;}
+#twitter {background:url(twitter.gif) no-repeat left center; padding-left:20px; text-decoration:underline;}
+#af {background:url(artem.gif) no-repeat left center; padding-left:20px; text-decoration:underline;}

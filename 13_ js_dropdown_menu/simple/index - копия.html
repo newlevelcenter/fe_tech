@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+    .hide { visibility:hidden }
+    .show { visibility:visible }
+</style>
+</head>
+<body>
+	<div align="left">
+<table border="0" width="700">
+<tr valign="top"><td>
+ <div style="background-color:#00BB00;"
+     onmouseover="show_Object1()" onmouseout="hide_Object1()" >
+  <span onmouseover="show_Object1()" onmouseout="hide_Object1()">
+  <b>Основные разделы</b></span>
+ </div>
+ <div id="div1" onmouseover="show_Object1()" onmouseout="hide_Object1()"
+     class="hide" style="background-color:#E8FED8;">
+  <a href="index.php" onmouseover="show_Object1()" onmouseout="hide_Object1()">
+  Главная</a><br>
+  <a href="news.php" onmouseover="show_Object1()" onmouseout="hide_Object1()">
+  Новости сайта</a><br>
+  <a href="plans.php" onmouseover="show_Object1()" onmouseout="hide_Object1()">
+  Планы развития</a><br>
+ </div>
+</td><td>
+ <div style="background-color:#00BB00;"
+     onmouseover="show_Object2()" onmouseout="hide_Object2()" >
+  <span onmouseover="show_Object2()" onmouseout="hide_Object2()">
+  <b>Скрипты</b></span>
+ </div>
+ <div id="div2" onmouseover="show_Object2()" onmouseout="hide_Object2()"
+     class="hide" style="background-color:#E8FED8;">
+  <a href="shadow_text.php" onmouseover="show_Object2()" onmouseout="hide_Object2()">
+  Скрипт тени к тексту</a><br>
+  <a href="gradient.php" onmouseover="show_Object2()" onmouseout="hide_Object2()">
+  Градиентная заливка текста</a><br>
+  <a href="simple_menu.php" onmouseover="show_Object2()" onmouseout="hide_Object2()">
+  Простое меню</a><br>
+ </div>
+</td><td>
+ <div style="background-color:#00BB00;"
+     onmouseover="show_Object3()" onmouseout="hide_Object3()" >
+  <span onmouseover="show_Object3()" onmouseout="hideO_bject3()">
+  <b>Хитрости</b></span>
+ </div>
+ <div id="div3" onmouseover="show_Object3()" onmouseout="hide_Object3()"
+     class="hide" style="background-color:#E8FED8;">
+  <a href="create_rss.php" onmouseover="show_Object3()" onmouseout="hide_Object3()">
+  Как сделать RSS-ленту</a><br>
+  <a href="no_www.php" onmouseover="show_Object3()" onmouseout="hide_Object3()">
+  Убираем www из адреса сайта</a><br>
+ </div>
+</td></tr>
+</table>
+</div>
+
+	<script type="text/javascript">
+ function show_Object1() { document.getElementById('div1').className='show'; }
+ function hide_Object1() { document.getElementById('div1').className='hide'; }
+ function show_Object2() { document.getElementById('div2').className='show'; }
+ function hide_Object2() { document.getElementById('div2').className='hide'; }
+ function show_Object3() { document.getElementById('div3').className='show'; }
+ function hide_Object3() { document.getElementById('div3').className='hide'; }
+</script>
+</body>
+</html>

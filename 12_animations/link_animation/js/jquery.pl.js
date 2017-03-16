@@ -1,6 +1,6 @@
 		(function( $ ) {
 			var lL;
-			$.fn.Pl = function(options) {
+			$.fn.Pl = function() {
 			var elem = this; //получаем объект
 			
 			elem.click(function(event){
