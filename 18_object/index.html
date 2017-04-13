@@ -22,7 +22,7 @@ li.even{
 <script>
 	var gen = {
 		title: "Тест по программированию",
-		questions: ["Вопрос №1!","Вопрос №2","Вопрос №3"],
+		questions: ["Вопрос №1","Вопрос №2","Вопрос №3"],
 		answers : [["Вариант ответа №1","Вариант ответа №2","Вариант ответа №3"],
 		["Вариант ответа №1","Вариант ответа №2","Вариант ответа №3"],
 		["Вариант ответа №1","Вариант ответа №2","Вариант ответа №3","Вариант ответа №4"]],
@@ -74,16 +74,13 @@ li.even{
 		$("#results input:checked").each(function(){
 			var code = $(this).attr("id");
 			code = parseInt(code);
-
 			var q = Math.floor(code/10);
-
 			var qn = code%10;
 			
 			if (gen1.right[q]==qn) {console.log('ok'); sum+=1;}
 			else
 				console.log('not ok');
 
-			
 			console.log(q+" "+qn);
 
 		});

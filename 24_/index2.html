@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var a = 34526;
+		var res = Math.floor(a/1)%10;
+		var res = Math.floor(a/10)%10;
+		var res = Math.floor(a/100)%10;
+		var res = Math.floor(a/1000)%10;
+		var res = Math.floor(a/10000)%10;
+
+		document.write(res+"<br>");
+
+		var a = 3456568426;
+		var s = Math.floor(a/1)%60;
+		var m = Math.floor(a/60)%60;
+		var h = Math.floor(a/3600)%24;
+		var d = Math.floor(a/(60*60*24))%365;
+		var y = Math.floor(a/(60*60*24*365));
+
+		document.write(y+"::"+d+"::"+h+"::"+m+"::"+s);
+
+
+	</script>
+</body>
+</html>

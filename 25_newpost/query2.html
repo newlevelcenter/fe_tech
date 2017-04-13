@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+  <meta charset='UTF-8'>
+  <title>JSSample</title>
+</head>
+ 
+<body>
+<div class="number"></div>
+<div class="citySender"></div>
+<div class="cityRecipient"></div>
+<div class="status"></div>
+<div class="documentWeight"></div>
+ 
+</body>
+ 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script>
+  $(function () {
+      var params = {
+    'modelName': 'AddressGeneral',
+    'calledMethod': 'getSettlements',
+    'methodProperties': {
+        'FindByString': 'Харьков'
+    },
+    'apiKey': '976743f25fbb1ac91ce1ecf10f9649ba'
+          
+      };
+      $.ajax({
+          url: 'https://api.novaposhta.ua/v2.0/json/?' + $.param(params),
+          beforeSend: function (xhrObj) {
+              xhrObj.setRequestHeader('Content-Type', 'application/json');
+              return Number;
+          },
+          type: 'POST',
+          dataType: 'jsonp',
+          data: '{body}'
+      }).done(function (jsondb) {
+       /*     $('.number').html(jsondb.data[0].Number) // номер посылки
+            $('.citySender').html(jsondb.data[0].CitySender) // город отправитель
+            $('.cityRecipient').html(jsondb.data[0].CityRecipient) // город получатель
+            $('.status').html(jsondb.data[0].Status) // статус посылки
+            $('.documentWeight').html('Вес: ' + jsondb.data[0].DocumentWeight + ' чего-то.') // вес*/
+            console.log(jsondb);
+      }).fail(function () {
+          alert('error');
+      });
+  });
+</script>
+ 
+</html>

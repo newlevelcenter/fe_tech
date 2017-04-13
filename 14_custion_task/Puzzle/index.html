@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="baraban">0</div>
+	<div id="result">-</div>
+	<button id = "set">Set</button>
+	<!--
+	1.Элементы: барабан, кнопка, отображение.
+	2. При нажатии кнопки - генерируется число и отображается.
+	3. Потсавить ограничение - 8 раз
+	-->
+	<script type="text/javascript">
+		  set.addEventListener("click",baraban_func);
+		  	function baraban_func(){
+		  		var bar = document.getElementsByClassName("baraban");
+		  		var a = Math.floor(Math.random()*10);
+		  		baraban.innerHTML=a;
+		  		switch (a){
+		  			case 1:
+		  				result.innerHTML="<a href = 'http://google.com'>one</a>";
+		  			break;
+		  			case 2:
+		  				result.innerHTML="<a href = 'http://google.com'>Two</a>";
+		  			break;
+		  			case 3:
+		  				result.innerHTML="<a href = 'http://google.com'>Three</a>";
+		  			break;
+		  			case 4:
+		  				result.innerHTML="<a href = 'http://google.com'>Four</a>";
+		  			break;
+		  			case 5:
+		  				result.innerHTML="<a href = 'http://google.com'>Five</a>";
+		  			break;
+		  			case 6:
+		  				result.innerHTML="<a href = 'http://google.com'>Six</a>";
+		  			break;
+		  			case 7:
+		  				result.innerHTML="<a href = 'http://google.com'>Seven</a>";
+		  			break;
+		  			case 8:
+		  				result.innerHTML="<a href = 'http://google.com'>Aight</a>";
+		  			break;
+		  			case 9:
+		  				result.innerHTML="<a href = 'http://google.com'>Nine</a>";
+		  			break;
+		  			case 0:
+		  				result.innerHTML="<a href = 'http://google.com'>Null</a>";
+		  			break;
+
+		  		}
+
+		  		console.log(bar);
+		  	}
+
+
+
+	</script>
+</body>
+</html>

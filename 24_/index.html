@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var v = 40;
+		var t = 5;
+	//	var res = Math.floor(14/3);
+		var res = v*t%109;
+
+		for (var i = 1; i <= 40; i++) {
+			document.write("text "+i+"<br>");
+			if ( (i%5==0) && (i%10!=0) ) {
+				document.write("<hr> ADV "+i+"<hr>");
+			}
+			}
+		i=0;
+		var a=0;
+		/*
+		do{
+			a = prompt("Введите четное число");
+		}while(a%2!=0)
+		*/
+		var n=0;
+		while(n<10){
+			a = Math.floor(Math.random()*10);
+			if (a%2==0){
+				n++;
+			}
+			document.write(a+" ");
+		}
+
+		document.write(a);
+
+
+	</script>
+</body>
+</html>

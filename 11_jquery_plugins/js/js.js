@@ -6,7 +6,9 @@
      $(this).css(
         {"position" : "absolute",
          "top":'0', "left": '20px'}).hide().eq(0).show();
+    
     $(this).after('<div id =l_arrow><</div>').after('<div id =r_arrow>></div>');
+    
     $("#l_arrow").css({"position" : "absolute","top":'50px', "left": '0',"cursor":'pointer'})
     $("#r_arrow").css({"position" : "absolute","top":'50px', "left": '230px',"cursor":'pointer'})
     var n_class = $(this).attr("class");

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSSample</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+    $(function() {
+        var params = {
+    "modelName": "Common",
+    "calledMethod": "getTimeIntervals",
+    "methodProperties": {
+        "RecipientCityRef": "8d5a980d-391c-11dd-90d9-001a92567626",
+        "DateTime": "18.09.2017"
+    },
+    "apiKey": "976743f25fbb1ac91ce1ecf10f9649ba"
+        };
+      
+        $.ajax({
+            url: "https://api.novaposhta.ua/v2.0/json/?" + $.param(params),
+            beforeSend: function(xhrObj){
+                // Request headers
+                xhrObj.setRequestHeader("Content-Type","application/json");
+            },
+            type: "POST",
+            // Request body
+            data: "",
+        })
+        .done(function(data) {
+            //alert("success");
+            console.log(data);
+        })
+        .fail(function() {
+            //alert("error");
+        });
+    });
+</script>
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <title>JSSample</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+    $(function() {
+        var params = {
+            // Request parameters
+            "callback": "{}",
+        };
+      
+        $.ajax({
+            url: "http://testapi.novaposhta.ua/v2.0/common/getTimeIntervals/json/?" + $.param(params),
+            beforeSend: function(xhrObj){
+                // Request headers
+                xhrObj.setRequestHeader("Content-Type","application/json");
+            },
+            type: "POST",
+            // Request body
+            data: "{}",
+        })
+        .done(function(data) {
+            alert("success");
+        })
+        .fail(function() {
+          console.log(data)
+            alert("error");
+        });
+    });
+</script>
+</body>
+</html>

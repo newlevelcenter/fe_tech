@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+  <script src = "tmpl.js"></script>
+	<script>
+	
+// Demo data.
+$(function(){
+
+  var dataObject = {
+    members:[
+          {ccy:"RUR", base_ccy:"UAH",buy:"0.00000",sale:"0.00000" },
+          {ccy:"EUR",base_ccy:"UAH",buy:"19.20000",sale:"20.00000"},
+          {ccy:"USD",base_ccy:"UAH",buy:"15.50000",sale:"15.85000"},
+          {ccy:"USD",base_ccy:"UAH",buy:"15.50000",sale:"15.85000"}
+          ]
+        
+  }; // -> End of dataObject
+  var dat;
+
+  $.getJSON("https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5",function(data){
+          $.each(data, function(i,item){
+          dataObject.members[i].ccy=item.ccy;
+          dataObject.members[i].base_ccy=item.base_ccy;
+          dataObject.members[i].buy=item.buy;
+          dataObject.members[i].sale=item.sale;
+          });
+
+  var results = document.getElementById("results");
+  results.innerHTML = tmpl("item_tmpl", dataObject);
+   });
+  
+});
+
+	</script>
+	
+	<style>
+li{
+    border-bottom: 1px dotted #CCCCCC;
+}
+li.odd{
+    background: #FFFFEE;    
+}
+li.even{
+    background: #FFFFCC;
+}
+	</style>
+</head>
+<body>
+
+
+
+	<ul id="results">
+	output results here.
+	</ul>
+	
+
+
+<script type="text/html" id="item_tmpl">
+
+  <% for(var i=0;i<members.length;i++){%>
+	
+	<li>№<%=i+1%> | <%=members[i].ccy%> | <%=members[i].base_ccy%> | <%=members[i].buy%> | <%=members[i].sale%> </li> 
+  
+  <% } %>
+</script>
+
+</body>
+</html>

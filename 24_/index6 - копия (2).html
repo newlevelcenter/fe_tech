@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var h1 = 1;
+		var m1 = 1;
+		var s1 = 1;
+
+		var h2 = 2;
+		var m2 = 2;
+		var s2 = 2;
+
+		var t1 = h1*3600+m1*60+s1;
+		var t2 = h2*3600+m2*60+s2;
+
+		var T = t2-t1;
+
+		document.write(T+"<br>");
+
+		var h = Math.floor(T/3600);
+		var m = Math.floor(T/60)%60;
+		var s = Math.floor(T/1)%60;
+
+		document.write(h+"::"+m+"::"+s+"<br>");
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	function QuickSort(A)
+		{
+   		 if (A.length == 0) return [];
+    	 var a=[], b=[], p=A[0];
+    	 for (var i=1; i<A.length; i++){
+    		if (A[i]<p) a[a.length]=A[i];
+       		else b[b.length]=A[i];
+     	}
+    	return QuickSort(a).concat(p,QuickSort(b) );
+}
+	k = [4,3,7,4,7];
+	console.log(QuickSort(k));
+
+	</script>
+</body>
+</html>

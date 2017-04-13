@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSSample</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<style>
+#example_j{border:solid 1px #999; margin:5px; padding:10px}
+#example_j span {font-weight:700; color:red}
+</style>
+
+</head>
+<body>
+
+
+//HTML/CSS
+<div id="example_j">
+<div></div>
+<input name="tel" value="8-912-357-xx-xx"> <input name="icq" value="414-546-xxx">
+<div></div>
+</div>
+
+<script type="text/javascript">
+//jQuery
+    var params = {"callback":
+    {"modelName": "Common",
+"calledMethod": "getTimeIntervals",
+"methodProperties": {
+"RecipientCityRef": "8d5a980d-391c-11dd-90d9-001a92567626",
+"DateTime": "18.09.2016"
+},
+"apiKey": "[ВАШ КЛЮЧ]"}
+};
+    var str = $.param(params);
+    $("#example_j div:first").text(str);
+    var str2 = $.param($('#example_j input'));
+	$("#example_j div:last").text(str2);
+	</script>
