@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var animal = {name:"jack", age:2, canspeak:"yes"};
+		
+		var cat = {name:"Vasja", age:3, whatsay:"mjau"};
+		cat.__proto__= animal; //кот получает значения от животного, работают те, которые НЕ перекрывают его собственных.
+		console.log(cat);
+		console.log(cat.name);
+		console.log(cat.canspeak);
+		console.log(cat.whatsay);
+
+	
+
+		function World (){
+			this.sky = "blue";
+			this.x0=0;
+			this.y0=0;
+			this.x1=640;
+			this.y1=480;
+		}
+
+		var newWorld = new World(); // создаем новый мир с параметрами, которые соответствуют параметрам текущего мира
+		newWorld.j = 'f';
+		console.log(newWorld);
+
+
+		function Company(){
+			this.name = "google";
+			this.people = 10000;
+			this.sayhello = function (){alert("hello")};
+		}
+
+		Company.prototype = newWorld; //прототипом компании сделали мир.
+		console.log(Company);
+
+		var newcompany = new Company(); //создали новую компанию, которая наследует все атрибуты старой (у которой в прототипе есть мир)
+		console.log(newcompany);
+		console.log(newcompany.sky);
+		
+		var own;
+		for (var key in newcompany) {
+		  own =  newcompany.hasOwnProperty(key);
+  		  document.write(key + " = " + newcompany[key] + " | "+own+"<br>"); 
+		}
+
+		document.write("<hr>");
+
+		var data1 = {};
+		console.log(data1);
+		document.write(data1.toString());
+
+		var data = Object.create(null);
+		
+		data.text = "Привет";
+		console.log(data);
+		document.write(data.text); // Привет
+		document.write(data.toString); // undefined
+
+	</script>
+</body>
+</html>

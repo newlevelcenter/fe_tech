@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+	function Rabbit() {}
+	// в Rabbit.prototype есть одно свойство: constructor
+	document.write( Object.getOwnPropertyNames(Rabbit.prototype) );// constructor
+	document.write("<br>");
+	// оно равно Rabbit
+	document.write( Rabbit.prototype.constructor == Rabbit ); // true
+		document.write("<br>");
+	document.write( Rabbit.prototype.constructor);
+
+
+
+	</script>
+</body>
+</html>
