@@ -1,0 +1,4 @@
+Хост:	levelhst.mysql.ukraine.com.ua	
+Логин:	levelhst_goapi	
+Пароль:	
+cc373udp	

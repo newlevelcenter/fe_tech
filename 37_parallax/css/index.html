@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+	<style type="text/css">
+		
+  * {
+    margin:0;
+    padding:0;
+  }
+
+  body {
+    font: 100% / 1.5 Arial;
+  }
+
+.parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 2px;
+    perspective: 2px;
+  }
+
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0); /*делаем трёх-мерный элемент*/
+  }
+
+  .parallax__layer--back {
+    -webkit-transform: translateZ(-1px);
+    transform: translateZ(-1px);
+    background:#ddd;
+  }
+
+  .parallax {
+    font-size: 200%;
+  }
+
+  .parallax__layer {
+    padding: 100vh 0;
+  }
+
+  .title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /*Сдвигает элемент на половину*/
+  }
+
+  .demo__info {
+    position: absolute;
+    z-index:100;
+    bottom: 1vh;
+    top: auto;
+    font-size:80%;
+    text-align:center;
+    width: 100%;
+  }
+
+	</style>
+</head>
+<body>
+	<div class="parallax">
+    <div class="parallax__layer parallax__layer--back">
+      <div class="title">This is the background</div>
+    </div>
+    <div class="parallax__layer parallax__layer--base">
+      <div class="title">This is the foreground</div>
+    </div>
+  </div>
+
+</body>
+</html>

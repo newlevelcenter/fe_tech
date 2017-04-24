@@ -19,12 +19,11 @@
 <script>
   $(function () {
       var params = {
-    
-    'modelName': 'AddressGeneral',
-    'calledMethod': 'getSettlements',
-    'methodProperties': {
-        'AreaRef': 'dcaadb64-4b33-11e4-ab6d-005056801329'
-    },
+'modelName': 'Address',
+'calledMethod': 'getStreet',
+'methodProperties': {
+'CityRef': 'ebc0eda9-93ec-11e3-b441-0050568002cf'
+},
     'apiKey': '976743f25fbb1ac91ce1ecf10f9649ba'
 
           
@@ -45,6 +44,11 @@
             $('.status').html(jsondb.data[0].Status) // статус посылки
             $('.documentWeight').html('Вес: ' + jsondb.data[0].DocumentWeight + ' чего-то.') // вес*/
             console.log(jsondb);
+            for (var i = 0; i < jsondb.data.length; i++) {
+              
+            
+            document.write(jsondb.data[i].Description+ "<br>");
+          }
       }).fail(function () {
           alert('error');
       });

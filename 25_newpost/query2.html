@@ -42,7 +42,7 @@
             $('.cityRecipient').html(jsondb.data[0].CityRecipient) // город получатель
             $('.status').html(jsondb.data[0].Status) // статус посылки
             $('.documentWeight').html('Вес: ' + jsondb.data[0].DocumentWeight + ' чего-то.') // вес*/
-            console.log(jsondb);
+          console.log(jsondb);
       }).fail(function () {
           alert('error');
       });
